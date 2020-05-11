@@ -1,6 +1,9 @@
 library(tidyverse)
 library(wbstats)
 
+# Inspired by 
+# https://github.com/saghirb/Women-in-Parliament-Hex-Sticker
+
 # Ubicar indicador de proporción de mujeres en parlamentos nacionales
 mujeres_indicador <- wbsearch(pattern = "women in national parliaments")
 
@@ -13,8 +16,8 @@ MeP_datos <- wb(indicator = as.character(mujeres_indicador[1]),
 
 # Cambiar nombres a español
 MeP_datos <- MeP_datos %>% 
-  mutate(Country.Region = ifelse(Country.Region == "Peru", "Perú", Country.Region)) %>%
-  mutate(Country.Region = ifelse(Country.Region == "Brazil", "Brasil", Country.Region)) %>%
-  mutate(Country.Region = ifelse(Country.Region == "Venezuela, RB", "Venezuela", Country.Region))
+  mutate(country = ifelse(country == "Peru", "Perú", country)) %>%
+  mutate(country = ifelse(country == "Brazil", "Brasil", country)) %>%
+  mutate(country = ifelse(country == "Venezuela, RB", "Venezuela", country))
 
 
