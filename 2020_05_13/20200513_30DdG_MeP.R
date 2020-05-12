@@ -29,7 +29,7 @@ MeP_gg <- ggplot(MeP_datos, aes(x = as.numeric(date), y = value,
   xlab("Año") + ylab("% de mujeres en el parlamento") +
   labs(title = "Porcentaje de mujeres en el parlamento nacional",
        subtitle = paste0("1990 a 2019"),
-       caption = paste0("kumulonimb.us | CC-BY-SA 4.0.\nFuente de datos: Banco Mundial")) +
+       caption = paste0("kumulonimb.us | CC-BY 1.0.\nFuente de datos: Banco Mundial")) +
   geom_line(size = 2)
 
 print(MeP_gg)

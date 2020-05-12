@@ -29,7 +29,7 @@ MeP_gg <- ggplot(MeP_grafico, aes(x = reorder(country, value), y = value)) +
   ) +
   labs(title = "Porcentaje de mujeres en el parlamento nacional",
        subtitle = paste0("Al año 2019 en naciones de América del Sur"),
-       caption = paste0("kumulonimb.us | CC-BY-SA 4.0.\nFuente de datos: Banco Mundial")) +
+       caption = paste0("kumulonimb.us | CC-BY 1.0.\nFuente de datos: Banco Mundial")) +
   geom_bar(stat = "identity", fill = "#5CAB7D", colour = "#FFFFFF00") +
   geom_text(size = 4,
             aes(label = formatC(round(value, digits = 1), decimal.mark = ",")),
